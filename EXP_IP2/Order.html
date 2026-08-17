@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daksha Fashion Hub - Order</title>
+
+    <script>
+        function orderSuccess()
+        {
+            alert("Your Order has been Placed Successfully!\nThank You for Shopping with Daksha Fashion Hub.");
+        }
+    </script>
+
+</head>
+
+<body bgcolor="lightcyan">
+
+<center>
+
+<h1> DAKSHA FASHION HUB</h1>
+
+<a href="index.html">Home</a> |
+<a href="products.html">Products</a> |
+<a href="order.html">Order</a>
+
+<hr>
+
+<h2>Customer Order Form</h2>
+
+<form>
+
+<table border="1" cellpadding="10">
+
+<tr>
+<td>Full Name</td>
+<td><input type="text" required></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input type="email" required></td>
+</tr>
+
+<tr>
+<td>Mobile Number</td>
+<td><input type="tel" required></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td><input type="password" required></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender"> Female
+</td>
+</tr>
+
+<tr>
+<td>Select Product</td>
+<td>
+<select>
+<option>Men's Shirt</option>
+<option>Women's Saree</option>
+<option>Sports Shoes</option>
+<option>Hand Bag</option>
+<option>Watch</option>
+<option>Jeans</option>
+<option>T-Shirt</option>
+<option>Wallet</option>
+<option>Belt</option>
+<option>Cap</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Quantity</td>
+<td><input type="number" min="1"></td>
+</tr>
+
+<tr>
+<td>Delivery Address</td>
+<td>
+<textarea rows="4" cols="30"></textarea>
+</td>
+</tr>
+
+<tr>
+<td>Payment Method</td>
+<td>
+<input type="radio" name="pay"> Cash on Delivery<br>
+<input type="radio" name="pay"> UPI<br>
+<input type="radio" name="pay"> Debit Card<br>
+<input type="radio" name="pay"> Credit Card
+</td>
+</tr>
+
+<tr>
+<td>Extra Services</td>
+<td>
+<input type="checkbox"> Gift Wrap<br>
+<input type="checkbox"> Express Delivery
+</td>
+</tr>
+
+<tr>
+<td>Upload Payment Screenshot</td>
+<td><input type="file"></td>
+</tr>
+
+<tr>
+<td>Delivery Date</td>
+<td><input type="date"></td>
+</tr>
+
+<tr>
+<td>Preferred Time</td>
+<td><input type="time"></td>
+</tr>
+
+<tr>
+<td>Rate Our Store</td>
+<td><input type="range" min="1" max="10"></td>
+</tr>
+
+<tr>
+<td>Feedback</td>
+<td>
+<textarea rows="4" cols="30"></textarea>
+</td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+
+<input type="button"
+value="Place Order"
+onclick="orderSuccess()">
+
+&nbsp;&nbsp;
+
+<input type="reset" value="Clear">
+
+</td>
+</tr>
+
+</table>
+
+</form>
+
+<br>
+
+<h2>Order Instructions Audio</h2>
+
+<audio controls>
+<source src="instructions.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+<h2>Shopping Guide Video</h2>
+
+<video width="450" controls>
+<source src="videoooo.mp4" type="video/mp4">
+</video>
+
+<br><br>
+
+<h2>Delivery Charges</h2>
+
+<table border="1" cellpadding="8">
+
+<tr bgcolor="yellow">
+<th>Delivery Type</th>
+<th>Time</th>
+<th>Charge</th>
+</tr>
+
+<tr>
+<td>Standard Delivery</td>
+<td>5-7 Days</td>
+<td>₹50</td>
+</tr>
+
+<tr>
+<td>Express Delivery</td>
+<td>2 Days</td>
+<td>₹100</td>
+</tr>
+
+<tr>
+<td>Same Day Delivery</td>
+<td>24 Hours</td>
+<td>₹250</td>
+</tr>
+
+</table>
+
+<br>
+
+<img src="Fashion Hub.jpg" width="300" height="180">
+
+<h3>Thank You for Shopping with Daksha Fashion Hub </h3>
+
+<hr>
+
+<p>&copy; 2026 Daksha Fashion Hub | All Rights Reserved</p>
+
+</center>
+
+</body>
+</html>
