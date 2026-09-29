@@ -1,0 +1,118 @@
+/* Universal Selector */
+*{
+    margin:0;
+    padding:0;
+}
+
+/* Body */
+body{
+    background-color:#FFF8DC;
+    font-family:Georgia;
+}
+
+/* Grouping Selector */
+h1,h2,h3{
+    color:darkblue;
+    text-align:center;
+    text-shadow:2px 2px lightgray;
+    margin:15px;
+}
+
+/* Paragraph */
+p{
+    text-align:center;
+    color:black;
+    font-size:18px;
+}
+
+/* Header */
+#header{
+    background-color:lightblue;
+    padding:20px;
+    border:3px solid navy;
+}
+
+/* Menu */
+#menu{
+    background-color:lightgray;
+    padding:10px;
+}
+
+#menu ul{
+    list-style-type:none;
+    text-align:center;
+}
+
+#menu ul li{
+    display:inline;
+    margin:15px;
+}
+
+#menu ul li a{
+    text-decoration:none;
+    color:darkred;
+    font-weight:bold;
+}
+
+#menu ul li a:hover{
+    color:blue;
+}
+
+/* Banner */
+#banner{
+    background-image:url("bg.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    padding:60px;
+    border:2px solid black;
+    margin:20px;
+}
+
+/* Table */
+table{
+    border-collapse:collapse;
+    margin:auto;
+    background-color:white;
+}
+
+th{
+    background-color:pink;
+    color:black;
+}
+
+td{
+    text-align:center;
+    padding:10px;
+}
+
+/* Image Hover */
+img{
+    border:2px solid black;
+    padding:5px;
+}
+
+img:hover{
+    border-color:red;
+}
+
+/* Heading Hover */
+h2:hover{
+    color:red;
+}
+
+/* Lists */
+ul,ol{
+    margin-left:50px;
+    padding:10px;
+    font-size:18px;
+}
+
+/* Footer */
+#footer{
+    background-color:lightblue;
+    border-top:3px solid navy;
+    margin-top:20px;
+    padding:15px;
+    text-align:center;
+}
