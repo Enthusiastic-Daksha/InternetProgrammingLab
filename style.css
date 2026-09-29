@@ -1,0 +1,324 @@
+/* =========================================
+   GENERAL PAGE
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 3px solid #1f2d3a;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-box {
+    width: 350px;
+    margin: 80px auto;
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 25px;
+}
+
+.login-box h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.login-box label {
+    display: inline-block;
+    width: 80px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 230px;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+}
+
+.login-box input[type="submit"],
+.login-box input[type="reset"] {
+    padding: 8px 20px;
+    margin-left: 10px;
+    border: 1px solid #777777;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.login-box input[type="reset"] {
+    background-color: #777777;
+}
+
+.login-box input[type="submit"]:hover {
+    background-color: #1f2d3a;
+}
+
+.login-box input[type="reset"]:hover {
+    background-color: #555555;
+}
+
+#message {
+    text-align: center;
+    color: red;
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   STUDENT DETAILS PAGE
+========================================= */
+
+.details-box {
+    width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 25px;
+}
+
+.details-box h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.details-box label {
+    display: inline-block;
+    width: 140px;
+    font-weight: bold;
+}
+
+.details-box input[type="text"],
+.details-box input[type="email"],
+.details-box select {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #aaaaaa;
+}
+
+.details-box input:focus,
+.details-box select:focus {
+    outline: none;
+    border: 1px solid #2c3e50;
+}
+
+.details-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.details-buttons input {
+    padding: 9px 18px;
+    margin: 5px;
+    background-color: #2c3e50;
+    color: white;
+    border: 1px solid #777777;
+    cursor: pointer;
+}
+
+.details-buttons input[type="reset"] {
+    background-color: #777777;
+}
+
+.details-buttons input:hover {
+    opacity: 0.9;
+}
+
+#detailsMessage {
+    text-align: center;
+    color: red;
+}
+
+
+/* =========================================
+   EXAM PAGE
+========================================= */
+
+.exam-container {
+    width: 850px;
+    margin: 30px auto;
+}
+
+
+/* Student information */
+
+.student-info {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.student-info h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.student-info p {
+    margin: 8px 0;
+}
+
+
+/* Questions */
+
+.question {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.question h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.question label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.question input[type="radio"] {
+    margin-right: 8px;
+}
+
+
+/* Exam buttons */
+
+.exam-buttons {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.exam-buttons input {
+    padding: 10px 25px;
+    margin: 5px;
+    border: 1px solid #777777;
+    color: white;
+    cursor: pointer;
+    background-color: #2c3e50;
+}
+
+.exam-buttons input[type="reset"] {
+    background-color: #777777;
+}
+
+.exam-buttons input:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   RESULT
+========================================= */
+
+.result-box {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.result-box h2 {
+    color: #2c3e50;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+}
+
+.result-box p {
+    padding: 7px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 700px) {
+
+    .login-box {
+        width: 80%;
+        margin: 50px auto;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .login-box label {
+        width: 100%;
+    }
+
+
+    .details-box {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .details-box label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .details-box input[type="text"],
+    .details-box input[type="email"],
+    .details-box select {
+        width: 100%;
+    }
+
+
+    .exam-container {
+        width: 90%;
+    }
+
+}
