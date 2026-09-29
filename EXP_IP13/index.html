@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Management</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+        }
+
+        .header {
+            background: #263238;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .container {
+            width: 85%;
+            margin: 35px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        button {
+            background: #1976d2;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0d47a1;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+        }
+
+        th {
+            background: #37474f;
+            color: white;
+            padding: 12px;
+        }
+
+        td {
+            padding: 11px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background: #f1f8ff;
+        }
+
+        .message {
+            margin-top: 15px;
+            color: #555;
+        }
+    </style>
+
+    <script>
+
+        function fetchOrders() {
+
+            var request = new XMLHttpRequest();
+
+            request.onreadystatechange = function() {
+
+                if (request.readyState === 4 && request.status === 200) {
+
+                    var xmlData = request.responseXML;
+                    var orderList = xmlData.getElementsByTagName("order");
+
+                    var result = "";
+
+                    result += "<table>";
+                    result += "<tr>";
+                    result += "<th>Order ID</th>";
+                    result += "<th>Customer</th>";
+                    result += "<th>Product</th>";
+                    result += "<th>Quantity</th>";
+                    result += "<th>Price</th>";
+                    result += "</tr>";
+
+                    for (var i = 0; i < orderList.length; i++) {
+
+                        var current = orderList[i];
+
+                        var orderId =
+                            current.getElementsByTagName("id")[0].textContent;
+
+                        var customerName =
+                            current.getElementsByTagName("customer")[0].textContent;
+
+                        var productName =
+                            current.getElementsByTagName("product")[0].textContent;
+
+                        var quantity =
+                            current.getElementsByTagName("quantity")[0].textContent;
+
+                        var price =
+                            current.getElementsByTagName("price")[0].textContent;
+
+                        result += "<tr>";
+                        result += "<td>" + orderId + "</td>";
+                        result += "<td>" + customerName + "</td>";
+                        result += "<td>" + productName + "</td>";
+                        result += "<td>" + quantity + "</td>";
+                        result += "<td>₹" + price + "</td>";
+                        result += "</tr>";
+                    }
+
+                    result += "</table>";
+
+                    document.getElementById("displayArea").innerHTML = result;
+
+                    document.getElementById("status").innerHTML =
+                        "Orders loaded successfully using AJAX.";
+                }
+            };
+
+            request.open("GET", "orders.xml", true);
+            request.send();
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Order Management Dashboard</h1>
+        <p>AJAX and XML Demonstration</p>
+    </div>
+
+    <div class="container">
+
+        <h2>Customer Orders</h2>
+
+        <button onclick="fetchOrders()">View Orders</button>
+
+        <p id="status" class="message">
+            Click the button to load order information.
+        </p>
+
+        <div id="displayArea"></div>
+
+    </div>
+
+</body>
+</html>

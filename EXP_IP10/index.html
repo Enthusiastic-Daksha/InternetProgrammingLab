@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e8f0fe;
+        }
+
+        .box {
+            width: 420px;
+            margin: 50px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 95%;
+            padding: 9px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            margin-top: 20px;
+            background: #3367d6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background: #244fa8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h2>User Registration</h2>
+
+        <form action="validate.php" method="POST">
+
+            <label>Full Name</label>
+            <input type="text" name="fullname" placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="text" name="emailid" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" name="passcode" placeholder="Enter password" required>
+
+            <label>Phone Number</label>
+            <input type="text" name="mobile" placeholder="Enter 10 digit number" required>
+
+            <label>Credit Card Number</label>
+            <input type="text" name="cardno" placeholder="Enter 16 digit card number" required>
+
+            <input type="submit" value="Register">
+
+        </form>
+
+    </div>
+
+</body>
+</html>

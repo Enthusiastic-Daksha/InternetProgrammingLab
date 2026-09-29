@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Order System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 450px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: #555;
+            outline: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 12px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background: #555;
+        }
+
+        .view-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .view-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Shopping Order Form</h1>
+
+    <form action="insert_order.php" method="POST">
+
+        <label>Customer Name</label>
+        <input type="text" name="customer_name" required>
+
+        <label>Product Name</label>
+        <input type="text" name="product_name" required>
+
+        <label>Quantity</label>
+        <input type="number" name="quantity" min="1" required>
+
+        <label>Price</label>
+        <input type="number" name="price" step="0.01" min="0" required>
+
+        <button type="submit" class="submit-btn">
+            Place Order
+        </button>
+
+    </form>
+
+    <a href="view_orders.php" class="view-link">
+        View All Orders
+    </a>
+
+</div>
+
+</body>
+</html>
